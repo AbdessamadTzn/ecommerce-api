@@ -1,12 +1,14 @@
 import { Roles } from 'src/utility/common/user-roles.enum';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('User')
-export class User {
+@Entity('user')
+export class UserEntity {
   @PrimaryGeneratedColumn()
   id: number;
   @Column()
   name: string;
+  @Column()
+  username: string;
   @Column()
   email: string;
   @Column()
